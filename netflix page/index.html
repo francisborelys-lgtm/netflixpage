@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetflixPage</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./img/logonetflix.png" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+      <header>
+        <a href="#" class="logo"
+          ><img src="img/HBO_Max_Logo_(October_2019).svg" alt="logo netflix"
+        /></a>
+        <ul class="navigation">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Series</a></li>
+          <li><a href="#">Peliculas</a></li>
+          <li><a href="#">Lo ultimo</a></li>
+          <li><a href="#">Mi lista</a></li>
+        </ul>
+        <div class="search">
+          <input type="text" placeholder="Buscar" />
+          <button class="btnbuscar"><span class="material-icons">search</span></button>
+        </div>
+      </header>
+      <section class="banner">
+        <img src="img/descarga.gif" alt="personaje" class="bg" />
+        <span class="sombraImg"></span>
+        <div class="content">
+          <img src="img/342b1ea4-6ebd-11ef-80b0-12734a5a1b4d.avif" class="movieTitle" />
+          <h4>
+            <span>2005</span>
+            <span><i>8+</i></span>
+            <span>4 temporadas</span>
+            <span>Serie</span>
+          </h4>
+          <p>
+            Un niño de 10 años encuentra un misterioso reloj alienígena que le permite transformarse en distintas criaturas con poderes únicos. Con la ayuda de su prima Gwen y su abuelo Max, Ben deberá enfrentar villanos, invasores espaciales y amenazas sobrenaturales, mientras aprende que ser un héroe es mucho más que tener poderes.
+          </p>
+          <div class="buttons">
+            <a href="#">Ver</a>
+            <a href="#">Lista</a>
+          </div>
+        </div>
+        <a href="#" class="play" onclick="toggleVideo();">
+            <img src="./img/play.png" />ver Trailer
+        </a>
+      </section>
+      <section class="trailer">
+        <video src="img/ssvid.net---Ben-10-intro-Clásico-Español-latino_360p.mp4" controls="true"></video>
+        <img src="./img/close.png" class="close" onclick="toggleVideo();">
+
+      </section>
+    </main>
+    <script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+
+        }
+    </script>
+  </body>
+</html>
